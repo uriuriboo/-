@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>クイズ採点機</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="style.css">
+</head>
+<body>
+    <div class="main">
+        <h1 class="explataion">これは多答クイズ採点アプリです。
+            採点をするには左のフォームにanswer.txtと名付けた答えのファイル、
+            右に回答者が分かるように名付けられた答えのファイルをすべて入力してください</h1>
+        <div class="input-form">
+            <div class="input-correct answer ">
+                <div class="mb-3">
+                    <label for="formFile" class="form-label">正答のファイルを入力してください</label>
+                    <input class="form-control" type="file" id="formFile">
+                </div>
+            </div>
+
+            <div class="input-submitted-answers">
+                <div class="mb-3">
+                    <label for="formFileMultiple" class="form-label">回答のファイルをすべて入力してください</label>
+                    <input class="form-control" type="file" id="formFileMultiple" multiple>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="scoring-button"></div>
+
+        <div id="result" class="result"></div>
+
+        <p>
+            ※注意  空白があると正しく採点されないことがあります。
+            設計上同じ語句を二つ以上回答してしまうと正常に採点できません。
+            インターネットにつながってない環境だとこのアプリを使うことができません。
+        </p>
+    </div>
+</body>
+</html>
