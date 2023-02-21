@@ -1,11 +1,20 @@
-.input-form {
-
+.main {
+  text-align: center;
 }
 
-.input-true-answer {
+.explanation {
+  font-size: 30px;
+}
 
+.input-form {
+  display: flex;
+  gap: 70px;
+}
+
+.input-correct-answer {
+  width: 500px;
 }
 
 .input-submitted-answers {
-
-}
+  width: 500px;
+}/*# sourceMappingURL=style.css.map */
