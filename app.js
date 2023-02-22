@@ -4,31 +4,26 @@ const answers = document.getElementById("formFileMultiple");
 // 名前と点数を保存
 var scores = [{}]
 
-document.getElementById("scoring").onclick = function () {
-  // console.log(correct_answer.files[0]["name"]);
-
+function answer_parser(file){
   const reader = new FileReader();
-  var cset = new Set()
-
-  // 正答のファイルを読み込み
-  reader.readAsText(correct_answer.files[0]);
+  var set = new Set()
+  reader.readAsText(file);
 
   reader.onload = function(e){
-    var correct_answers = reader.result.split(/\r\n|\n/);
+    var answers = reader.result.split(/\r\n|\n/);
 
-    for(let i = 0;i < correct_answers.length;i++){
-      cset.add(correct_answers[i])
-    }
-  };
-
-
-  // 回答者たちの答えを読み込みしたいがエラー(同期ができていない？)
-  for(let i = 0;i < answers.files.length;i++){
-    reader.readAsText(answers.files[i]);
-    reader.onload = function(e){
-      console.log(reader.result)
+    for(let i = 0;i < answers.length;i++){
+      set.add(answers[i])
     }
   }
-
+  // サイズが0になる
+  console.log(set)
+  return set;
 };
 
+document.getElementById("scoring").onclick = function () {
+  var cset = answer_parser(correct_answer.files[0]);
+  for (let i = 0; i < answers.files.length; i++){
+    var aset = answer_parser(answers.files[i]);
+  }
+}
