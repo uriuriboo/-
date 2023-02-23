@@ -1,5 +1,6 @@
 .main {
   text-align: center;
+  margin: 20px 0 0 0;
 }
 
 .explanation {
@@ -8,13 +9,18 @@
 
 .input-form {
   display: flex;
-  gap: 70px;
+  gap: 100px;
   justify-content: center;
   align-items: center;
+  margin: 100px 0 0 20px;
 }
 .input-form .input-correct-answer {
   width: 500px;
 }
 .input-form .input-submitted-answers {
   width: 500px;
+}
+
+.scoring-button {
+  margin: 100px 0 80px 0;
 }/*# sourceMappingURL=style.css.map */

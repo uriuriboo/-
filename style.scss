@@ -1,16 +1,19 @@
 
 .main {
     text-align: center;
+    margin: 20px 0 0 0;
 }
 
 .explanation {
     font-size: 30px;
 }
+
 .input-form {
     display: flex;
-    gap: 70px;
+    gap: 100px;
     justify-content: center;
     align-items: center;
+    margin: 100px 0 0 20px;
 
     .input-correct-answer {
         width: 500px;
@@ -19,5 +22,9 @@
     .input-submitted-answers {
         width: 500px;
     }
+}
+
+.scoring-button {
+    margin:100px 0 80px 0;
 }
 
