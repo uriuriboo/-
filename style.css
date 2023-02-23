@@ -9,12 +9,12 @@
 .input-form {
   display: flex;
   gap: 70px;
+  justify-content: center;
+  align-items: center;
 }
-
-.input-correct-answer {
+.input-form .input-correct-answer {
   width: 500px;
 }
-
-.input-submitted-answers {
+.input-form .input-submitted-answers {
   width: 500px;
 }/*# sourceMappingURL=style.css.map */

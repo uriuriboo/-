@@ -7,15 +7,17 @@
     font-size: 30px;
 }
 .input-form {
-    // width: 300px;
     display: flex;
     gap: 70px;
+    justify-content: center;
+    align-items: center;
+
+    .input-correct-answer {
+        width: 500px;
+    }
+
+    .input-submitted-answers {
+        width: 500px;
+    }
 }
 
-.input-correct-answer {
-    width: 500px;
-}
-
-.input-submitted-answers {
-    width: 500px;
-}
