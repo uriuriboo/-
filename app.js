@@ -13,15 +13,15 @@ async function answer_parser(file){
 
 
   var set = new Set(result_base64.split(/\r\n|\n/))
-  console.log(set)
+
   return set;
 };
 
 document.getElementById("scoring").onclick = function () {
-  var cset = answer_parser(correct_answer.files[0]);
-
+  var cset = await answer_parser(correct_answer.files[0]);
+  console.log(cset)
   for (let i = 0; i < answers.files.length; i++){
-    var aset = answer_parser(answers.files[i]);
+    var aset = await answer_parser(answers.files[i]);
     // 以下で点数の採点を行い、連想配列scoresにファイルの名前から取った回答者名と点数を記録
 
   }
