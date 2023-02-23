@@ -39,6 +39,13 @@ document.getElementById("scoring").onclick = async function () {
   result_array.reverse()
   console.log(result_array)
 
+  const element = document.getElementById("result")
+  if(element.hasChildNodes()){
+    while (element.firstChild) {
+      element.removeChild(element.firstChild);
+    }
+  }
+
   document.getElementById("result").insertAdjacentHTML("beforeend",`<h2>結果</h2>`)
   for(let i = 0;i < result_array.length;i++){
     var result = `<p>${i+1}位 ${result_array[i]["key"]}さん ${result_array[i]["value"]}点</p>`
